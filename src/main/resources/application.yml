@@ -1,4 +1,3 @@
-
 logging:
   level:
     org.hibernate.SQL: debug # logger? ?????
@@ -12,3 +11,8 @@ spring:
         highlight_sql: true # ANSI ??? ?? ????
         use_sql_comments: true # SQL ??? /* */ ?? ??
 
+auth:
+  jwt:
+    issuer: sparta.com
+    secret: Azqio13asxjc93zawqerAEsdD1263BDE
+    accessTokenExpirationHour: 10
