@@ -21,18 +21,14 @@ class MemberController(
 
 
     @PostMapping("/sign-up")
-    fun signUp(
-        @RequestBody signUpRequest: SignUpRequest
-    ): ResponseEntity<SignUpResponse> {
+    fun signUp(@RequestBody signUpRequest: SignUpRequest): ResponseEntity<SignUpResponse> {
         return ResponseEntity
             .status(HttpStatus.OK)
             .body(memberService.signUp(signUpRequest))
     }
 
     @PostMapping("/login")
-    fun login(
-        @RequestBody loginRequest: LoginRequest
-    ): ResponseEntity<LoginResponse> {
+    fun login(@RequestBody loginRequest: LoginRequest): ResponseEntity<LoginResponse> {
         return ResponseEntity
             .status(HttpStatus.OK)
             .body(memberService.login(loginRequest))

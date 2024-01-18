@@ -1,4 +1,6 @@
 package com.sparta.todospringapplication.domain.member.dto.response
 
-class SignUpResponse {
-}
+data class SignUpResponse(
+    val email: String,
+    val nickname: String
+)

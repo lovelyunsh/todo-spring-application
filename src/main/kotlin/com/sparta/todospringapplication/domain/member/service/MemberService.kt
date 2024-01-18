@@ -8,9 +8,9 @@ import com.sparta.todospringapplication.domain.member.dto.response.SignUpRespons
 
 interface MemberService {
 
-    fun signUp(signUpRequest: SignUpRequest):SignUpResponse
+    fun signUp(signUpRequest: SignUpRequest): SignUpResponse
 
-    fun login(loginRequest : LoginRequest):LoginResponse
+    fun login(loginRequest: LoginRequest): LoginResponse
 
 
 }

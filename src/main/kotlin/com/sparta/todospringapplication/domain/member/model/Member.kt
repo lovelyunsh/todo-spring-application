@@ -1,23 +1,25 @@
 package com.sparta.todospringapplication.domain.member.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import org.springframework.data.annotation.CreatedDate
-import org.springframework.data.annotation.LastModifiedDate
+import jakarta.persistence.*
+import org.hibernate.annotations.CreationTimestamp
+import org.hibernate.annotations.UpdateTimestamp
 import java.time.LocalDateTime
 
 @Entity
 data class Member(
+    @Column(nullable = false)
     val email: String,
+    @Column(nullable = false)
     val password: String,
-    val nickName: String,
+    @Column(nullable = false)
+    val nickname: String,
 
-    @CreatedDate
-    val createdAt: LocalDateTime,
-    @LastModifiedDate
-    val updatedAt: LocalDateTime
+    @CreationTimestamp
+    @Column(updatable = false)
+    var createdAt: LocalDateTime? = null,
+    @UpdateTimestamp
+    @Column
+    var updatedAt: LocalDateTime? = null
 ) {
 
     @Id
